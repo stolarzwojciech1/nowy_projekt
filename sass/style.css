@@ -1,0 +1,221 @@
+html, body {
+   min-height: 100dvh; /* Ustawia pełną wysokość strony */
+  margin: 0;    /* Usuwa domyślne marginesy przeglądarki */
+  background-color: rgba(214, 117, 203, 0.9);
+
+}
+
+
+
+.gora {
+  /* 1. Tło i nakładka przyciemniająca (linear-gradient): */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(11, 11, 11, 0.6)), 
+    url('../images/podkladgora.png');
+  
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  /* 2. Typografia: */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #fafafa;
+  
+  /* 3. Układ strony: */
+
+  padding: 0;
+  width:1400px;
+  height: 881px;
+  background-size: 1400px 881px;
+  text-align: center;
+  margin:auto;
+   background-color: rgba(254, 254, 254, 0.9);
+  /* TUTAJ NIE MOŻE BYĆ: display: grid ani grid-template-columns! */
+  /* Do%myślny układ blokowy sprawi, że kontenery naturalnie ułożą się jeden pod drugim */
+}
+
+
+
+}
+
+* {
+  box-sizing: border-box; /* Sprawia, że padding i border nie powiększają elementów */
+}
+
+.container{
+
+text-align: left;
+margin-top: 20px;
+
+
+}
+.row{
+
+  justify-content: space-between;
+  align-items: left;
+
+ 
+
+  text-align: left;
+
+
+  min-height: 0;
+  /* KLUCZOWE ROZWIĄZANIE: */
+  text-align: left; 
+ 
+ overflow: hidden;
+ margin-right: 100px !important; 
+width:  !important;
+
+
+
+ 
+ 
+}
+.logo{
+ background-image: url('../images/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px; /* Szerokość logo */
+  height: 100px; /* Wysokość logo */
+  display: block;
+
+  margin-top: 100px;
+  background-position: center top;
+margin-left: 200px;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.margin{
+  margin-right: auto;
+ flex: 0 0 auto !important; /* Blokuje automatyczne rozciąganie Bootstrapa */
+  width: auto !important;    /* Pozwala kolumnie dopasować się do szerokości słowa HOME */
+   margin-top: 10px;
+}
+
+.container2{
+  text-align: center;
+
+  margin-bottom: 20px;
+ min-width: 100%;
+
+ 
+} 
+
+.dol{
+  display: grid;
+  c /* Wymusza jedną kolumnę (elementy jeden pod drugim) */
+  justify-content: center;    /* Środkuje kolumnę w poziomie */
+  align-content: center;      /* Środkuje wiersze w pionie (wymaga określonej wysokości kontenera) */
+  justify-items: center;
+}
+
+ .container3{
+  display: grid;
+  place-items: center; 
+ background-color: rgba(255, 253, 255, 0.9);
+  width: 1400px;
+  margin: 0 auto;
+  min-height: 250px;
+}
+
+.container4{
+ display: grid;
+  place-items: center; 
+ background-color: rgba(255, 253, 255, 0.9);
+  width: 1400px;
+  margin: 0 auto;
+  min-height: 250px;
+  grid-template-columns: repeat(3, 1fr); 
+}
+.container5{
+text-align: center;
+
+background-color: rgba(255, 253, 255, 0.9);
+width: 1400px;
+  margin: 0 auto;
+ 
+}
+.container6{
+  text-align: center;
+align-items: center;
+  margin-bottom: 20px;
+ min-width: 100%;
+}
+.stopka{
+  text-align: left;
+align-items: center;
+ width: 1400px;
+  margin: 0 auto;
+
+  grid-template-columns: 200px 1fr;
+  background-color: rgba(255, 253, 255, 0.9);
+}
+
+h1{
+  font-size: 48px;
+  color: #333;
+  align-items: center;
+  margin-top: 30px    ; /* Usuwa domyślny margines górny */
+
+}
+h3{
+  font-size: 36px;
+  color: #555;
+  align-items: center;
+
+  }
+h1 + h3 {
+  margin-top: -100px;
+}
+.pion{
+  display: grid;
+  
+}
+.lewa{
+  text-align: left;
+  
+  display: grid;
+  width: 33%;
+}
+.srodek{
+  text-align: center;
+
+  display: grid;
+  width: 33%;
+
+ 
+}
+.produkty{
+  display: grid;
+  grid-template-columns:  repeat(1, 1fr);
+
+  width: 1400px;
+    
+   background-color: rgba(255, 253, 255, 0.9);
+   
+ place-content: center;
+ max-width: 100%; /* Zapobiega wychodzeniu poza ekran na mniejszych monitorach */
+
+
+}
+.menu{
+  display: grid;
+justify-content:center;
+ text-align: center;
+  align-items: center;
+}
+
+.pudelko{
+    display: grid;
+  width: 1000px;
+  max-width: 100%;
+  /* Zamiast sztywnych 100px, poniższy zapis automatycznie rozciągnie 3 kolumny po równo na przestrzeni 1000px */
+  grid-template-columns: repeat(3, 1fr); 
+   margin: 0 auto;
+  background-color: rgba(176, 214, 122, 0.9);
+  place-items: center; /* Środkuje zawartość wewnątrz każdej z 3 komórek */
+  padding: 20px;       /* Opcjonalnie: dodaje estetyczny odstęp wewnątrz zielonego pudełka */
+}

@@ -74,9 +74,9 @@ width:  !important;
  
 }
 .logo{
- background-image: url('images/logo.png');
+ background-image: url('./images/logo.png');
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;`
   width: 100px; /* Szerokość logo */
   height: 100px; /* Wysokość logo */
   display: block;

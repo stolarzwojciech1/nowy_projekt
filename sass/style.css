@@ -133,7 +133,7 @@ margin-left: 200px;
 .container5{
 text-align: center;
 
-background-color: rgba(255, 253, 255, 0.9);
+background-color: rgba(113, 112, 113, 0.9);
 width: 1400px;
   margin: 0 auto;
  
@@ -172,6 +172,11 @@ h1 + h3 {
 }
 .pion{
   display: grid;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  wrap-content: center;
+  white-space: nowrap;
   
 }
 .lewa{
@@ -194,7 +199,7 @@ h1 + h3 {
 
   width: 1400px;
     
-   background-color: rgba(255, 253, 255, 0.9);
+   background-color: rgba(114, 109, 114, 0.9);
    
  place-content: center;
  max-width: 100%; /* Zapobiega wychodzeniu poza ekran na mniejszych monitorach */
@@ -206,6 +211,7 @@ h1 + h3 {
 justify-content:center;
  text-align: center;
   align-items: center;
+  background-color: rgba(139, 136, 139, 0.9);
 }
 
 .pudelko{
@@ -215,7 +221,22 @@ justify-content:center;
   /* Zamiast sztywnych 100px, poniższy zapis automatycznie rozciągnie 3 kolumny po równo na przestrzeni 1000px */
   grid-template-columns: repeat(3, 1fr); 
    margin: 0 auto;
-  background-color: rgba(176, 214, 122, 0.9);
+  background-color: rgba(126, 127, 125, 0.9);
   place-items: center; /* Środkuje zawartość wewnątrz każdej z 3 komórek */
   padding: 20px;       /* Opcjonalnie: dodaje estetyczny odstęp wewnątrz zielonego pudełka */
 }
+.tekst{
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  white-space: nowrap;
+
+
+}
+.zdjecie{
+  width: 300px;        /* Wpisz swoją zadaną szerokość */
+  height: 200px;       /* Wpisz swoją zadaną wysokość */
+  object-fit: cover;   /* Kadruje zdjęcie, zachowując proporcje */
+  object-position: center; /* Centruje kadr w pionie i poziomie */
+}
+

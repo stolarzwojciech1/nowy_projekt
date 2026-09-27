@@ -240,3 +240,62 @@ justify-content:center;
   object-position: center; /* Centruje kadr w pionie i poziomie */
 }
 
+
+@media (max-width: 768px) {
+  /* 1. Resetowanie kontenerów Grid: jedna kolumna, brak sztywnych szerokości i pełne środkowanie */
+  .gora, .dol, .stopka, .container3, .container4, .container5, .pudelko, .produkty, .menu, .pion {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;          /* Usuwa sztywne 881px z klasy .gora */
+    min-width: 0 !important;           /* Zapobiega rozpychaniu przez min-width: 100% */
+    margin: 0 auto !important;         /* Centruje całe kontenery */
+    place-items: center !important;    /* Środkuje elementy w Gridzie */
+    text-align: center !important;     /* Środkuje teksty */
+  }
+
+  /* 2. Naprawa elastycznych wierszy (Flexbox) */
+  .row {
+    display: flex !important;
+    flex-direction: column !important; /* Układa elementy w pionie */
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;        /* Usuwa margines 100px, który wypychał stronę w bok */
+    margin-left: 0 !important;
+    padding: 0 15px !important;        /* Bezpieczny odstęp od krawędzi ekranu */
+    justify-content: center !important;
+    align-items: center !important;    /* Środkuje elementy flex */
+  }
+
+  /* 3. Kolumny zajmują teraz 100% szerokości zamiast 33% */
+  .lewa, .srodek {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* 4. Wyśrodkowanie logo i usunięcie bocznego marginesu 200px */
+  .logo {
+    margin: 20px auto !important;      /* Usuwa margin-left: 200px i pięknie środkuje */
+    max-width: 100% !important;
+  }
+
+  /* 5. Dopasowanie obrazków, aby nie wystawały poza ekran telefonu */
+  .zdjecie {
+    max-width: 100% !important;        /* Zdjęcie zmniejszy się, jeśli ekran ma mniej niż 300px */
+    height: auto !important;
+  }
+
+  /* 6. Korekta nagłówków h1 i h3 */
+  h1 {
+    font-size: 32px !important;        /* Zmniejszamy gigantyczny font 48px na telefon */
+    margin-top: 20px !important;
+  }
+  h3 {
+    font-size: 24px !important;
+  }
+  h1 + h3 {
+    margin-top: 10px !important;       /* Usuwa ujemny margines -100px, który psuł układ */
+  }
+}
+
